@@ -1,6 +1,6 @@
 package scrabble
 
-import "unicode" 
+import "unicode"
 
 var values = map[rune]int{
 	'a': 1,
@@ -33,10 +33,10 @@ var values = map[rune]int{
 
 // Score - Given a word, compute scrabble score
 func Score(input string) (score int) {
-  var w rune
+	var w rune
 	for _, c := range input {
-    w = unicode.ToLower(c)
-    score += values[w]
+		w = unicode.ToLower(c)
+		score += values[w]
 	}
 
 	return score
