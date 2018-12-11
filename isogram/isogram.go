@@ -7,7 +7,7 @@ import (
 // IsIsogram - determines if word is an isogram
 func IsIsogram(input string) bool {
 	var count int
-	seen := make(map[rune]bool)
+	seen := map[rune]bool{}
 
 	for _, c := range input {
 		if !unicode.IsLetter(c) {
